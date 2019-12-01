@@ -1,0 +1,21 @@
+version: '3'
+services:
+  eureka-server:
+    image: jjgao/eureka-server
+    restart: always
+    ports:
+      - 8761:8761
+
+  service-gateway:
+    image: jjgao/service-gateway
+    restart: always
+    ports:
+      - 8081:8081
+
+  service-hi:
+    image: jjgao/service-hi
+    restart: always
+    ports:
+      - 8762:8762
+
+
